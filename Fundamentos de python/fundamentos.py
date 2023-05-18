@@ -384,3 +384,174 @@
 # print(salida)
 
 # video 40- 11:33
+# def agregar(x,y):
+#   return x + y
+
+# res = agregar(100,20)
+# # print(res)
+# def reves(texto):
+#   return texto[::-1] #tambien funciona para arreglos
+# palabra = "lapiz"
+# print(reves(palabra))
+# lista=[1,2,3,4,5]
+# print(reves(lista))
+
+#video 41- 9:32
+#video 42- 7:53
+# variables scope, global y local
+# a=250 # es de alcance global entones es visible en todo el programa
+# def f1():
+#   global a # asi puedo mofidicar esa a de forma global
+#   a = 100
+#   # b=a+10
+#   # a=100 # aqui esta fuera del alcance de f2, es de alcance local
+#   print(a)
+
+# def f2():
+#   a=50 # global
+#   print(a)
+
+# f1()
+# f2()
+# print(a)# sigue en 250, y no podemos cambiar las variables globales dentro de las funciones
+# a= [1,2,3]
+
+# def f1():
+#     a[0]=5 # si modifica el valor del arreglo, y aplica lo mismo para dicts
+#     print(a)
+
+# def f2():
+#     a = 50 # no modifica el arreglo total
+#     print(a)
+
+# print(a)
+#video 43- 10:05
+# argumentos y parametros
+# ahi ya le puse un valor predeterminado a gustos por si la persona no ingresa uno
+# def sobre(nombre,edad,gustos='python'): #parametros, lo que recibe la funcion
+#     oracion = f"Es {nombre} tiene {edad} años de edad y le gusta {gustos}"
+#     return oracion
+
+# print(sobre(edad=24, nombre='jack',gustos='futbol')) #argumentos, lo que le paso a la funcion en la llamada
+# # puede ser en orden, o en desorden pero diciendole a que parametro pertenece
+
+# print(sobre(edad=24, nombre='jack'))
+
+#video 44- 15:44
+
+# numeros = [1,2,3,4,5]
+# # print(numeros)
+# # print(*numeros) # recorre el iterable y es como si le pasara (1,2,3,4,5)
+
+# # print(*'abc') # recorre el iterable y es como si le pasara ('a','b','c')
+
+# def agregar(*numeros): # lo que le pase, lo empaquetara en una tupla llamada numeros
+#   total = 0
+#   for i in numeros:
+#     total+=i
+  
+#   return total
+
+# # print(agregar(1,2,3,4,5,6,7,8,9)) # es como si se guardara (1,2,3,4,5,6,7,8,9)
+
+# def sobre(nombre, edad, gustos):
+#   oracion = f'Es {nombre} tiene {edad} años de edad y le gusta {gustos}'
+#   return oracion
+
+# dictionary = {'nombre':'Jack','edad':23,'gustos':'python'}
+
+# # print(sobre(**dictionary))# al ser diccionario lo paso con **, y lo que hace es como que (nombre=tal, edad=32,gustos=tal) utilizando el diccionario
+# #es lo mismo que decir
+# # print(sobre(nombre='Jack',edad=23,gustos='Python'))
+
+
+# def mi_funcion(**kwargs): #puede ser cualquier nombre, pero ahi recibe lo de (n=1,t=2,b=5) y lo convierte a diccionario
+#   for key,value in kwargs.items():
+#     print(f'{key}:{value}')
+
+
+# mi_funcion(huda='femenino',jack='masculino',john='masculino')
+
+# #* para pasar valores como tupla o listas, y el ** para tipo diccionario, para empaquetar o desempaquetar
+
+#video 45- 10:52
+#video 46- 14:21
+# tic tac toc
+
+# tablero = ["  " for i in range(9)]
+
+# def print_tablero():
+#     fila1 = f'| {tablero[0]} | {tablero[1]} | {tablero[2]} |'
+#     fila2 = f'| {tablero[3]} | {tablero[4]} | {tablero[5]} |'
+#     fila3 = f'| {tablero[6]} | {tablero[7]} | {tablero[8]} |'
+
+#     print()
+#     print(fila1)
+#     print(fila2)
+#     print(fila3)
+#     print()
+
+# def jugador_mov(icono):
+#     if icono == 'X':
+#         numero = 1
+#     elif icono == 'O':
+#         numero = 2
+#     print(f'Tu tunro jugador {numero}')
+#     elecccion = int(input('Ingrese su movimiento (1-9): ').strip())
+#     if tablero[elecccion -1] == '  ':
+#         tablero[elecccion -1] = icono
+#     else:
+#         print()
+#         print('El espacio esta ocupado')
+# def es_victoria(icono):
+#     if (tablero[0]==icono and tablero[1]==icono and tablero[2]==icono) or \
+#     (tablero[3]==icono and tablero[4]==icono and tablero[5]==icono) or \
+#     (tablero[6]==icono and tablero[7]==icono and tablero[8]==icono) or \
+#     (tablero[0]==icono and tablero[3]==icono and tablero[6]==icono) or \
+#     (tablero[1]==icono and tablero[4]==icono and tablero[7]==icono) or \
+#     (tablero[2]==icono and tablero[5]==icono and tablero[8]==icono) or \
+#     (tablero[0]==icono and tablero[4]==icono and tablero[8]==icono) or \
+#     (tablero[2]==icono and tablero[4]==icono and tablero[6]==icono):
+#         return True
+#     else:
+#         return False
+
+# def es_empate():
+#     if '  ' not in tablero:
+#         return True
+#     else:
+#         return False
+
+# while True:
+#     print_tablero()
+#     jugador_mov('X')
+#     print_tablero()
+#     if es_victoria('X'):
+#         print('X es el ganador')
+#         break
+#     elif es_empate():
+#         print('esto es empate')
+#         break
+#     jugador_mov('O')
+#     if es_victoria('O'):
+#         print('X es el ganador')
+#         break
+#     elif es_empate():
+#         print('esto es empate')
+#         break
+
+#video 47- 4:53
+#video 48- 7:36
+
+# class Libra:
+#     valor = 1.0
+#     color = 'dorado'
+#     num_bordes = 1
+#     diametro = 22.5 #mm
+#     grosor=3.15 #mm
+#     caras = True
+
+# moneda1 = Libra()
+# print(moneda1.valor)
+
+#video 49- 16:44
