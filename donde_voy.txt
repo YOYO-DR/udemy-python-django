@@ -1,0 +1,3 @@
+video 85- 5:03
+video 86- 3:54
+revisar registro de django_tareas_azure

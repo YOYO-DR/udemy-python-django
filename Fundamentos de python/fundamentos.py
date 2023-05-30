@@ -1,3 +1,7 @@
+import os
+from dotenv import load_dotenv
+load_dotenv('./.env')
+import mysql.connector
 # video 6- 8:10
 # first_number=1+1
 # print(first_number)
@@ -18,7 +22,7 @@
 # print(type(0.5))
 # print(5%3)
 
-#video 8- 4:36
+# video 8- 4:36
 
 # order de las operaciones
 # p (), o **, d /, m *, a +, s -
@@ -48,11 +52,11 @@
 # print(math.pow(2,3)) # es exponente 2**3
 # print(2**3)
 
-#video 12 hola mundo - 8:38
+# video 12 hola mundo - 8:38
 
-#video 13- 12:26
+# video 13- 12:26
 
-#pedir nombre al usuario
+# pedir nombre al usuario
 # nombre = input('Cual es tu nombre: ')
 # print(nombre)
 
@@ -86,7 +90,7 @@
 # print(texto.isdigit()) #  si tiene solo numeros enteros
 # print(texto.isalnum()) # si tiene solo letras o numeros (no cuenta espacios)
 
-#cideo 16- 11:12
+# cideo 16- 11:12
 
 # x = 'happy birthday'
 # print(x.index('birthday')) # dice donde inicia la cadena buscada, si no la encuentra lanza error
@@ -97,7 +101,7 @@
 # # cantidad de caracteres
 # print(len(x))
 
-#video 17- 12:48
+# video 17- 12:48
 
 # palabra = 'programacion'
 
@@ -173,8 +177,8 @@
 # print(nuestraTabla[2])
 # print(nuestraTabla[0][2])
 
-#video 25- 9:08
-#video 26- 10:36
+# video 25- 9:08
+# video 26- 10:36
 # video 27- 5:45
 # usuariosConocidos = ['Alice','Bob','Claire','Dan','Emma','Fred','Georgie','Harry']
 # # print(len(usuariosConocidos))
@@ -187,23 +191,23 @@
 # while True:
 #   print('Hola, mi nombre es Keto')
 #   nombre=input('Cual es tu nombre: ').strip().capitalize() # la primerla letra la pongo en mayuscula
-  # if nombre in usuariosConocidos:
-  #   print('nombre reconocido')
-  #   print(f'Hola {nombre}')
-  #   eliminar = input('Te gustaria ser eliminado del sistema (y/n)?: ').strip()
-  #   if eliminar == 'y':
-  #     usuariosConocidos.remove(nombre) # elimino si encuentra el elemento
-  #   elif eliminar == 'n':
-  #     print('No hay problema si no deseas salir')
-  # else:
-  #   print(f'Hmm no creo haberte conocido aun {nombre}')
-  #   agregar = input('Te gustaria ser agregado al sistema (y/n)?: ').strip().lower()
-  #   if agregar == 'y':
-  #     usuariosConocidos.append(nombre)
-  #   elif agregar =='n':
-  #     print('No te preocupes, nos vemos')
+# if nombre in usuariosConocidos:
+#   print('nombre reconocido')
+#   print(f'Hola {nombre}')
+#   eliminar = input('Te gustaria ser eliminado del sistema (y/n)?: ').strip()
+#   if eliminar == 'y':
+#     usuariosConocidos.remove(nombre) # elimino si encuentra el elemento
+#   elif eliminar == 'n':
+#     print('No hay problema si no deseas salir')
+# else:
+#   print(f'Hmm no creo haberte conocido aun {nombre}')
+#   agregar = input('Te gustaria ser agregado al sistema (y/n)?: ').strip().lower()
+#   if agregar == 'y':
+#     usuariosConocidos.append(nombre)
+#   elif agregar =='n':
+#     print('No te preocupes, nos vemos')
 
-#video 28- 12:31
+# video 28- 12:31
 # a= [5,12,72,55,89]
 # a=a+[1] # con el + puedo sumarle o agregarle listas
 # print(a)
@@ -221,7 +225,7 @@
 # a[0]='asi' # asigno un valor a esa posicion
 # print(a)
 
-#video 29- 8:39
+# video 29- 8:39
 # nuestraTupla = 1,2,3,'a','b','c' # se puede crear asi
 # # print(type(nuestraTupla))
 # nuestraTupla = (1,2,3,'a','b','c') # pero normalmente es asi
@@ -270,7 +274,7 @@
 
 # print(estudiantes['emma']['id'], estudiantes['emma']['grado'])
 
-#video 32- 15:00
+# video 32- 15:00
 
 # peliculas = {
 #     'Nemo':[3,5],
@@ -314,7 +318,7 @@
 
 # print('Oh entiendo')
 
-#video 35- 10:46
+# video 35- 10:46
 # for numero in range(1,11,2):
 #     print(numero)
 # vocales = 0
@@ -341,7 +345,7 @@
 #     if 'a' in nombre:
 #       print(nombre)
 
-#video 37- 6:04
+# video 37- 6:04
 # compresion de listas
 
 # num_pares = [x for x in range(1,101) if x %2 ==0]
@@ -353,10 +357,10 @@
 # respuesta = [[w.upper(),w.lower(),len(w)] for w in palabras] # creo arreglos dentro de otras listas y con un for
 # # print(respuesta)
 
-#video 38- 4:34
-#video 39- 16-10
+# video 38- 4:34
+# video 39- 16-10
 
-#obtener oracion del usuario
+# obtener oracion del usuario
 # original = input('Ingresa una oracion: ').strip().lower()
 # #dividir en palabras
 # palabras = original.split() #por defecto parte en palabras
@@ -396,8 +400,8 @@
 # lista=[1,2,3,4,5]
 # print(reves(lista))
 
-#video 41- 9:32
-#video 42- 7:53
+# video 41- 9:32
+# video 42- 7:53
 # variables scope, global y local
 # a=250 # es de alcance global entones es visible en todo el programa
 # def f1():
@@ -425,7 +429,7 @@
 #     print(a)
 
 # print(a)
-#video 43- 10:05
+# video 43- 10:05
 # argumentos y parametros
 # ahi ya le puse un valor predeterminado a gustos por si la persona no ingresa uno
 # def sobre(nombre,edad,gustos='python'): #parametros, lo que recibe la funcion
@@ -437,7 +441,7 @@
 
 # print(sobre(edad=24, nombre='jack'))
 
-#video 44- 15:44
+# video 44- 15:44
 
 # numeros = [1,2,3,4,5]
 # # print(numeros)
@@ -449,7 +453,7 @@
 #   total = 0
 #   for i in numeros:
 #     total+=i
-  
+
 #   return total
 
 # # print(agregar(1,2,3,4,5,6,7,8,9)) # es como si se guardara (1,2,3,4,5,6,7,8,9)
@@ -474,8 +478,8 @@
 
 # #* para pasar valores como tupla o listas, y el ** para tipo diccionario, para empaquetar o desempaquetar
 
-#video 45- 10:52
-#video 46- 14:21
+# video 45- 10:52
+# video 46- 14:21
 # tic tac toc
 
 # tablero = ["  " for i in range(9)]
@@ -540,18 +544,548 @@
 #         print('esto es empate')
 #         break
 
-#video 47- 4:53
-#video 48- 7:36
+# video 47- 4:53
+# video 48- 7:36
+# video 49- 16:44
+# video 50- 13:05
+# video 51- 13:49
 
-# class Libra:
-#     valor = 1.0
-#     color = 'dorado'
-#     num_bordes = 1
-#     diametro = 22.5 #mm
-#     grosor=3.15 #mm
-#     caras = True
+# import random
+# class Moneda:
+#     def __init__(self, raro=False, limpio=True, caras=True, **kwargs):
+#         for key, value in kwargs.items():
+#             # setattr es para pasarle los atributos del dict, primero el objeto, segundo nombre y tercero su valor
+#             setattr(self, key, value)
+#         self.es_raro = raro
+#         self.es_limpio = limpio
+#         self.caras = caras
 
-# moneda1 = Libra()
-# print(moneda1.valor)
+#         if self.es_raro:
+#             self.valor = self.valor_original * 1.25
+#         else:
+#             self.valor = self.valor_original
 
-#video 49- 16:44
+#         if self.es_limpio:
+#             self.color = self.color_limpio
+#         else:
+#             self.color = self.color_oxidado
+#     def __str__(self):
+#         if self.valor_original >=1:
+#             return f"Moneda {str(self.valor_original)} Libra"
+#         else:
+#             return f"Moneda {str(self.valor_original*100)} Penique"
+
+#     # def __del__(self):  # destruye el objeto
+#     #     print('Moneda gastada')
+
+#     def oxido(self):
+#         self.color = self.color_oxidado
+
+#     def limpiar(self):
+#         self.color = self.color_limpio
+
+#     def vueltas(self):
+#         caras_opciones = [True, False]
+#         eleccion = random.choice(caras_opciones)
+#         self.caras = eleccion
+
+# class Un_Penique(Moneda): #hereda
+#     def __init__(self):
+#         data = {
+#             'valor_original': 0.01,
+#             'color_limpio': 'bronce',
+#             'color_oxidado': 'marron',
+#             'num_bordes': 1,
+#             'diametro': 20.3,
+#             'grosor': 1.52,
+#             'peso': 3.56
+#         }
+#         super().__init__(**data)
+
+# class Dos_Penique(Moneda): #hereda
+#     def __init__(self):
+#         data = {
+#             'valor_original': 0.02,
+#             'color_limpio': 'bronce',
+#             'color_oxidado': 'marron',
+#             'num_bordes': 1,
+#             'diametro': 25.9,
+#             'grosor': 1.85,
+#             'peso': 7.12
+#         }
+#         super().__init__(**data)
+
+# class Cinco_Penique(Moneda): #hereda
+#     def __init__(self):
+#         data = {
+#             'valor_original': 0.05,
+#             'color_limpio': 'plata',
+#             'color_oxidado': None,
+#             'num_bordes': 1,
+#             'diametro': 18.0,
+#             'grosor': 1.77,
+#             'peso': 3.25
+#         }
+#         super().__init__(**data)
+
+#     def oxido(self): # como el plata no se puede oxidar y aqui llamo el metodo y lo sobreescribo pero solo para esta clase
+#         self.color = self.color_limpio
+
+# class Libra(Moneda): #hereda
+#     def __init__(self):
+#         data = {
+#             'valor_original': 1.00,
+#             'color_limpio': 'dorado',
+#             'color_oxidado': 'verdoso',
+#             'num_bordes': 1,
+#             'diametro': 22.5,
+#             'grosor': 3.15,
+#             'peso': 9.5
+#         }
+#         #con super hago referencia a la clase super, y pues le paso los datos desde aqui del init al init del padre para que cree los atributos para esta moneda por el data
+#         super().__init__(**data)  # desempaquetamos por el argumento
+
+# monedas=[Libra(),Un_Penique(),Dos_Penique(),Cinco_Penique()]
+
+# for moneda in monedas:
+#   argumentos = [moneda,moneda.color,moneda.valor,moneda.diametro,moneda.grosor,moneda.num_bordes,moneda.peso]
+#   cadena = "{} - Color: {}, Valor: {}, diametro(mm): {}, grosor(mm): {}, bordes: {}, peso: {}".format(*argumentos) # utilizo para desempaquetar y que se pongan ahi en los {} en el orden del arreglo
+#   print(cadena)
+
+#   #video 52- 15:02
+
+# class Cuenta:
+#     def __ini__(self,nombre,balance,balance_min):
+#       self.nombre = nombre
+#       self.balance = balance
+#       self.balance_min = balance_min
+    
+#     def deposito(self,monto):
+#        self.balance += monto
+
+#     def retiro(self,monto):
+#       if self.balance - monto >= self.balance_min:
+#           self.balance -= monto
+#       else:
+#          print('Lo siento, no hay dinero')
+    
+#     def declaracion(self):
+#        print(f'Balance de la cuenta {self.balance}')
+
+
+# class Corriente(Cuenta):
+#   def __init__(self,nombre,balance):
+#       super().__init__(nombre,balance,balance_minimo = -1000)
+  
+#   def __str__(self):
+#      return f'Cuenta de {self.nombre} - Balance de {self.balance}'
+
+
+# class Ahorro(Cuenta):
+#   def __init__(self,nombre,balance):
+#       super().__init__(nombre,balance,balance_minimo = 0)
+  
+#   def __str__(self):
+#      return f'Cuenta de {self.nombre} - Balance de {self.balance}'
+
+# z = Corriente('Juan',500)
+# t = Ahorro('Tom',300)
+
+#video 53- 7:48
+# ruta = 'D:/programacion/Python/Udemy/Python/La Ruta de Python - Django Fullstack Developer/Fundamentos de python/datos.txt'
+# archivo=open(ruta,'r') #,encoding='UTF-8' asi modifico el codigo si quiero
+# #mirar ruta
+# print(archivo.encoding)
+# print(archivo.name)
+# # print(archivo)
+# # print(archivo.mode) # mirar el modo,r para leer, w para sobreescribir todo el numero, a para escribir al final
+# # print(archivo.closed) #verificar si ya se cerro el archivo
+# archivo.close() # cerrar el archivo
+# # print(archivo.closed) #verificar si ya se cerro el archivo
+
+#video 54- 8:00
+# ruta = 'D:/programacion/Python/Udemy/Python/La Ruta de Python - Django Fullstack Developer/Fundamentos de python/datos.txt'
+# archivo=open(ruta,'r')
+
+# registro = archivo.readline() #devuelve la primera linea + el salto de linea
+# registro = archivo.readlines() # mete en un arreglo cada valor de las lineas
+# #al ser arreglo, puedo acceder a cada linea como acceder a un arreglo
+# # registro = archivo.read() #devuelve todo los datos
+# # si pongo un readline y luego otro, no me va a poner el mismo dato o linea, sino que continua en la linea
+# # print(registro[2])
+# registro1 = archivo.readline()
+# registro2 = archivo.readline()
+# archivo.seek(0) # le digo a que linea volver
+# registros = archivo.readlines()
+# print(registro1)
+# print(registro2)
+# print(registros)
+# #imprime lo 2 primeros, y al ultimo lo lee desde ahi
+
+# siempre cerrar el archivo
+# archivo.close()
+
+#video 55- 11:40
+
+# ruta1 = 'D:/programacion/Python/Udemy/Python/La Ruta de Python - Django Fullstack Developer/Fundamentos de python/datos.txt'
+
+# ruta2 = 'D:/programacion/Python/Udemy/Python/La Ruta de Python - Django Fullstack Developer/Fundamentos de python/datos_esc.txt'
+
+# archivo_lec=open(ruta1,'r')
+# # archivo_esc = open(ruta2,'w') #voy a escribir
+# # archivo_esc = open(ruta2,'a') # agrega al final los textos
+# archivo_esc = open(ruta2,'r+') # significa que sera de lectura y escritura a la vez, pero como el modo a
+
+# # registros = archivo_lec.read()#leo ese archivo
+# # archivo_esc.write(registros)
+# # archivo_esc.write('Yoiner') # sobreescribe todo, porque esta en modo w
+# # archivo_esc.write('\nYuri') # lo agrega, ys i no le pongo el salto de linea lo va a poner enseguida de lo que haya
+# # archivo_esc.write('''
+# # Yoiner
+# # Perez
+# # Daniel
+# # Aleja
+# # Danna''') # asi lee los saltos de linea 
+# archivo_esc.seek(0,2)# le digo que 2 para que pongo el cursor al final y escribir ahi
+# archivo_esc.write('Yoiner')
+
+# archivo_lec.close()
+# archivo_esc.close()
+
+# video 56- 10:37
+# ruta = 'D:/programacion/Python/Udemy/Python/La Ruta de Python - Django Fullstack Developer/Fundamentos de python/datos_1.txt'
+
+# archivo=open(ruta,'w')
+
+# print(archivo.readline())
+# archivo.write('Maria')
+
+# archivo.close() # si no cierro, no guarda nada
+
+# with open(ruta,'r') as archivo1:
+#   with open(ruta,'a') as archivo2:
+#     #asi puedo leer con r y modificar con w
+#     registros = archivo1.read()
+#     print(registros)
+
+#video 57- 20:09
+# ruta = 'D:/programacion/Python/Udemy/Python/La Ruta de Python - Django Fullstack Developer/Fundamentos de python/personas.txt'
+
+# def agregar(nombre,edad,genero):
+#     with open(ruta,'a') as archivo:
+#         fila=f'{nombre},{edad},{genero}\n'
+#         archivo.write(fila)
+#         print('-'*5+'Persona agregada'+'-'*5)
+
+# # agregar('aleja',19,'F')
+
+# def lista():
+#     with open(ruta,'r') as archivo:
+#         print('-'*5+'Lista'+'-'*5)
+#         print(archivo.read())
+#         print('-'*15)
+
+# # lista()
+
+# def listarGenero(letraGenero):
+#     with open(ruta,'r') as archivos:
+#         # print(archivos.readlines())
+#         archivos.seek(0,0) #reiniciar cursor para que lea al inicio porque el readlines dejo el cursor al final
+#         for archivo in archivos:
+#             archivo=archivo.strip('\n') #quitar el salto de linea
+#             nombre,edad,genero = archivo.split(',')
+
+#             if letraGenero.lower()==genero.lower():
+#                 print(archivo)
+
+# # listarGenero('m')
+# while True:
+#     print('---Elige una opcion---')
+#     print('1 - Agregar una persona')
+#     print('2 - Listar personas')
+#     print('3 - Listar personas por genero')
+#     print('4 - Cerrar registro')
+
+#     opcion = input('¿Que quieres hacer? (1-4): ').strip()
+#     if int(opcion) ==1:
+#         nom = input('Tu nombre: ').strip().capitalize()
+#         ed = input('Tu edad: ').strip()
+#         gen = input('Tu genero: ').strip().upper()
+#         agregar(nom,ed,gen)
+#     elif int(opcion) == 2:
+#         lista()
+#     elif int(opcion) == 3:
+#         gen = input('Ingresa el genero: ').strip().upper()
+#         listarGenero(gen)
+#     elif int(opcion) == 4:
+#         break
+#     else:
+#         print('opcion invalida')
+
+# video 58- 2:18
+# video 59- 7:55
+# video 60- 11:22
+# video 61- 5:58
+# video 62- 18:36
+# video 63- 17:42
+# video 64- 11:08
+# video 65- 5:15
+
+# def funcion_principal(funcion_parametro):
+#     print('Dentro de funcion principal')
+#     def funcion_ejecutar(nom):
+#         print('Dentro de funcion_ejecutar')
+#         return funcion_parametro(nom)
+#     # funcion_ejecutar()
+#     #se puede retornar
+#     return funcion_ejecutar
+
+# def saludo(nombre):
+#     print('Hola',nombre)
+
+# def pregunta(nombre):
+#     print(f'Como estas {nombre}?')
+# # saludo()
+# # s=saludo # asi puedo asignar una funcion a una variable (objecto funtion)
+# # s()
+
+# respuesta = funcion_principal(pregunta) # se lo paso sin los ()
+# respuesta('Juan')
+
+# video 66- 10:53
+
+# def decorador(funcion_parametro):
+#     def funcion_ejecutar(a,b):
+#         a=int(a)
+#         b=int(b)
+#         return funcion_parametro(a,b)
+#     return funcion_ejecutar
+# @decorador
+# def suma(a,b):
+#     c = a + b
+#     return c
+
+# @decorador
+# def resta(a,b):
+#     c=a-b
+#     return c
+
+# res=suma(2,5)
+# # es como si fuera esto
+# # obj_funcion=decorador(resta) # se utiliza para los modulos
+# # resultado = obj_funcion(4,5)
+# # print(resultado)
+# print(res)
+
+# video 67- 14:22
+# video 68- 10:39
+# video 69- 4:10
+# video 70- 11:03
+
+# a = input('Ingresa un valor de a: ')
+# b = input('Ingresa un valor de b: ')
+
+# try:
+#   resultado = int(a)/int(b)
+#   print(resultado)
+# except ValueError:
+#   print('a o b no son numericos')
+# except ZeroDivisionError:
+#   print('Lo siento, no puedes dividir por cero')
+# except Exception as error: # este debe ir de ultimo
+#   print(type(error)) # ver que tipo de error es
+#   print(f'Lo siento, hubo un error ({error})')
+
+# print('Fuera del bloque try-ecxept')
+
+# video 71- 5:44
+# video 72- 7:14
+# video 73- 9:06
+# video 74- 12:28
+# import mysql.connector
+
+# mi_db=mysql.connector.connect(
+#     host=os.environ.get('DBHOST'),
+#     user=os.environ.get('DBUSER'),
+#     password=os.environ.get('DBPASS')
+# )
+
+# mi_cursor=mi_db.cursor()
+# # sql = 'CREATE DATABASE ecommerce'
+# # mi_cursor.execute(sql)
+
+# # sql = 'DROP DATABASE ecommerce'
+# # mi_cursor.execute(sql)
+
+# sql = 'SHOW DATABASES'
+# mi_cursor.execute(sql)
+# for item in mi_cursor:
+#     print(item)
+
+# mi_db.close()
+
+# video 75- 8:59
+
+# mi_db=mysql.connector.connect(
+#     host=os.environ.get('DBHOST'),
+#     user=os.environ.get('DBUSER'),
+#     password=os.environ.get('DBPASS'),
+#     database='ecommerce'
+# )
+
+# mi_cursor=mi_db.cursor()
+# sql = '''CREATE TABLE cliente (
+#             nombre VARCHAR(255),
+#             apellido VARCHAR(255)
+# )'''
+# mi_cursor.execute(sql)
+
+# # sql = 'DROP TABLE IF EXISTS cliente'
+# # mi_cursor.execute(sql)
+
+
+# mi_cursor.execute('SHOW TABLES')
+# for tabla in mi_cursor:
+#     print(tabla)
+
+# mi_db.close()
+# video 76- 7:12
+# mi_db=mysql.connector.connect(
+#     host=os.environ.get('DBHOST'),
+#     user=os.environ.get('DBUSER'),
+#     password=os.environ.get('DBPASS'),
+#     database='ecommerce'
+# )
+
+# mi_cursor=mi_db.cursor()
+
+# sql='''ALTER TABLE 
+#         cliente ADD cliente_id INT AUTO_INCREMENT PRIMARY KEY'''
+# mi_cursor.execute(sql)
+
+# mi_cursor.execute('DESCRIBE cliente')
+# for columnas in mi_cursor:
+#     print(columnas)
+
+# mi_db.close()
+
+# video 77- 7:50
+# mi_db=mysql.connector.connect(
+#     host=os.environ.get('DBHOST'),
+#     user=os.environ.get('DBUSER'),
+#     password=os.environ.get('DBPASS'),
+#     database='ecommerce'
+# )
+
+# mi_cursor=mi_db.cursor()
+
+# #sql = '''INSERT INTO cliente
+# #          (nombre,apellido)
+# #          VALUES ('Maria','Paredes')'''
+# #mi_cursor.execute(sql)
+
+# mi_cursor.execute('SELECT * FROM cliente')
+# for reg in mi_cursor:
+#     print(reg)
+
+# # mi_db.commit() # para que se apliquen los cambios antes de cerrar la conexión
+# mi_db.close()
+
+# video 78- 8:11
+# mi_db=mysql.connector.connect(
+#     host=os.environ.get('DBHOST'),
+#     user=os.environ.get('DBUSER'),
+#     password=os.environ.get('DBPASS'),
+#     database='ecommerce'
+# )
+
+# mi_cursor=mi_db.cursor()
+
+# sql = '''INSERT INTO cliente
+#             (nombre, apellido)
+#             VALUES (%s, %s)'''
+
+# # valores = ('Mercedes','Rojas')
+# # mi_cursor.execute(sql, valores)
+
+# valores = [('Carlos','Parco'),
+#            ('Kyle','Smith'),
+#            ('Anderson','Salazar')]
+# mi_cursor.executemany(sql, valores)
+# mi_db.commit()
+
+# mi_cursor.execute('SELECT * FROM cliente')
+# for cliente in mi_cursor:
+#     print(cliente)
+
+# mi_db.close()
+
+# video 79- 8:13
+# mi_db=mysql.connector.connect(
+#     host=os.environ.get('DBHOST'),
+#     user=os.environ.get('DBUSER'),
+#     password=os.environ.get('DBPASS'),
+#     database='ecommerce'
+# )
+
+# mi_cursor=mi_db.cursor()
+
+# # sql = ''' SELECT nombre,apellido FROM cliente '''
+# # sql = ''' SELECT nombre,apellido FROM cliente 
+#           # WHERE nombre='Maria' '''
+# sql = ''' SELECT nombre,apellido FROM cliente 
+#           WHERE nombre=%s '''
+
+# mi_cursor.execute(sql,('Pedro',))
+# for reg in mi_cursor:
+#     print(reg)
+
+# mi_db.close()
+
+# video 80- 9:03
+# delete
+# mi_db=mysql.connector.connect(
+#     host=os.environ.get('DBHOST'),
+#     user=os.environ.get('DBUSER'),
+#     password=os.environ.get('DBPASS'),
+#     database='ecommerce'
+# )
+# mi_cursor=mi_db.cursor()
+
+# sql = '''DELETE FROM cliente 
+#           WHERE nombre = %s '''
+# valores = ('Carlos',)
+# mi_cursor.execute(sql,valores)
+# mi_db.commit()
+
+# mi_cursor.execute('SELECT * FROM cliente')
+# for reg in mi_cursor:
+#     print(reg)
+
+# mi_db.close()
+
+# update
+# mi_db=mysql.connector.connect(
+#     host=os.environ.get('DBHOST'),
+#     user=os.environ.get('DBUSER'),
+#     password=os.environ.get('DBPASS'),
+#     database='ecommerce'
+# )
+# mi_cursor=mi_db.cursor()
+
+# sql = '''UPDATE cliente 
+#           SET nombre = %s 
+#           WHERE nombre = %s'''
+
+# valores=('Juan','Anderson')
+# mi_cursor.execute(sql,valores)
+# mi_db.commit()
+
+# mi_cursor.execute('SELECT * FROM cliente')
+# for reg in mi_cursor:
+#     print(reg)
+
+# mi_db.close()
+
+# video 81- 13:53
+# video 82- 16:47
